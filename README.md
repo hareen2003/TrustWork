@@ -1,4 +1,4 @@
-# TrustWork v2.0
+# TrustWork 
 
 **A Console-Based Tool for Skill Verification & Trust Network Management**
 
