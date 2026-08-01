@@ -21,6 +21,22 @@
 
 The tool implements three core data structures (AVL Tree, Doubly Linked List, Graph) to efficiently manage worker profiles, employment history, and trust relationships.
 
+## ▶️ How to Run
+
+Open the project in **Visual Studio Code** and open the integrated terminal (**Terminal → New Terminal**).
+
+Compile all Java source files:
+
+```powershell
+javac -d bin $(Get-ChildItem -Recurse -Filter *.java | ForEach-Object { $_.FullName })
+```
+
+Run the application:
+
+```powershell
+java -cp bin TrustWorkApplication
+```
+
 ---
 
 ## ✨ Features
