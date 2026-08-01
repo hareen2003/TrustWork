@@ -1,8 +1,10 @@
-package member2;
+package COHNDSE252_055;
+
 
 import utils.DateTimeHelper;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
+
 
 /**
  * Job history entry data class
@@ -19,7 +21,7 @@ public class JobEntry {
     private boolean isCurrent;
     private long durationMonths;
     private String addedDate;
-    
+   
     public JobEntry(String jobId, String workerId, String employerName,
                    String jobTitle, String description, String startDate,
                    String endDate, boolean isCurrent) {
@@ -34,10 +36,10 @@ public class JobEntry {
         this.durationMonths = calculateDuration();
         this.addedDate = DateTimeHelper.getCurrentDateTime();
     }
-    
+   
     private long calculateDuration() {
         if (isCurrent) return 0;
-        
+       
         try {
             LocalDate start = LocalDate.parse(startDate);
             LocalDate end = LocalDate.parse(endDate);
@@ -46,7 +48,7 @@ public class JobEntry {
             return 0;
         }
     }
-    
+   
     // Getters
     public String getJobId() { return jobId; }
     public String getWorkerId() { return workerId; }
@@ -58,9 +60,12 @@ public class JobEntry {
     public boolean isCurrent() { return isCurrent; }
     public long getDurationMonths() { return durationMonths; }
     public String getAddedDate() { return addedDate; }
-    
+   
     @Override
     public String toString() {
         return jobTitle + " at " + employerName + " (" + startDate + " to " + endDate + ")";
     }
 }
+
+
+
